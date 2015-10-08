@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  
+<!-- Mirrored from www.ratemyprofessors.com/ShowRatings.jsp?tid=1224531 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2015 00:49:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/lecture_css.css') }}"/>
+	<meta charset="utf-8">
+	
+	<title>Lecture test page</title>      
+	<script>
+	</script>
+  </head>
+  <body class="show_professor">
+  
+	<!-- Starts The Page Wrap -->
+	<div id="container">
+	  <div class="overlay"></div>
+	 
+		<!-- Starts Header -->
+		<header>
+		  <div id="headerArea">
+		  <span id="headerTitle">reKUmmend</span>
+		</div>
+	  </header>
+
+	  <!-- Starts Body Content -->
+
+	  <div id="body" class="slide">
+		<div id="mainContent">
+		  
+	{% for lecture in classList %}
+	<div class="right-panel">
+
+	  <div class="rating-breakdown">
+		<div class="rating-leftside">
+		<div class="left-breakdown">
+		  <div class="breakdown-wrapper">
+			<div class="breakdown-header">
+			  
+			  <div class="grade"></div>
+			</div>
+		  </div>
+		  <div class="breakdown-wrapper">
+		  	<form method="post" name="showLec{{lecture['lectureID']}}" action="/class">
+			<input type="hidden" name="lecID" value="{{lecture['lectureID']}}">
+			<div class="breakdown-lecture" onClick="document.forms['showLec{{lecture['lectureID']}}'].submit();">
+			  <div class="grade"><a class="lecName">{{lecture['lectureName']}}</a></div>
+			</div>
+			
+			</form>
+		  </div>
+
+		  <div class="breakdown-wrapper">
+			<div class="breakdown-header">
+			  Total
+			  <div class="grade">{{lecture['total']}}</div>
+			</div>
+		  </div>         
+		</div>
+
+		</div>
+		<div class="rating-rightside">
+		  <div class="faux-slides">
+		  
+			<div class="rating-slider">
+			  <div class="label">difficulty</div>
+			  <div class="rating">{{lecture['difficulty']}}</div>
+			  <div class="slider">
+				<div class="rate-slider" data-rating="good">
+					{% set lec_dif = lecture['difficulty']|float * 20 %}
+				  <div class="ui-slider-range" style="width:{{lec_dif}}%"></div>
+				  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: {{lec_dif}}%;"></a>
+				</div>
+			  </div>
+			</div>
+			<div class="rating-slider">
+			  <div class="label">studyTime</div>
+			  <div class="rating">{{lecture['studyTime']}}</div>
+			  <div class="slider">
+				<div class="rate-slider"  data-rating="good">
+					{% set lec_time = lecture['studyTime']|float * 20 %}
+				  <div class="ui-slider-range" style="width:{{lec_time}}%"></div>
+				  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: {{lec_time}}%;"></a>
+				</div>
+			  </div>
+			</div>
+			<div class="rating-slider">
+			  <div class="label">attendance</div>
+			  <div class="rating">{{lecture['attendance']}}</div>
+			  <div class="slider">
+				<div class="rate-slider" data-rating="good">
+					{% set lec_att = lecture['attendance']|float * 20 %}
+				  <div class="ui-slider-range" style="width:{{lec_att}}%"></div>
+				  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: {{lec_att}}%;"></a>
+				</div>
+			  </div>
+			</div>
+			<div class="rating-slider">
+			  <div class="label">grade</div>
+			  <div class="rating">{{lecture['grade']}}</div>
+			  <div class="slider">
+				<div class="rate-slider" data-rating="good">
+					{% set lec_grade = lecture['grade']|float * 20 %}
+				  <div class="ui-slider-range" style="width:{{lec_grade}}%"></div>
+				  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: {{lec_grade}}%;"></a>
+				</div>
+			  </div>
+			</div>
+			<div class="rating-slider">
+			  <div class="label">achievement</div>
+			  <div class="rating">{{lecture['achievement']}}</div>
+			  <div class="slider">
+				<div class="rate-slider" data-rating="good">
+					{% set lec_achie = lecture['achievement']|float * 20 %}
+				  <div class="ui-slider-range" style="width:{{lec_achie}}%"></div>
+				  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: {{lec_achie}}%;"></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>  
+	</div>
+	{% endfor %}
+		</div>
+	  </div>
+	  <!-- Ends Body Content -->
+
+	</div>
+
+
+	  <div id="footerArea">
+		  <span id="footerCopyright">
+			Copyright @ 2015 Team 17
+		  </span>
+		</div>
+
+  </body>
+</html>

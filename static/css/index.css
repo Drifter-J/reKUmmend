@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+html,body {
+    background-color: #FFF;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 9pt;
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+button {
+	border: none;
+	cursor: pointer;
+	font-family: 'Raleway', sans-serif;
+}
+button:focus {
+	outline: none;
+    border: none;
+    border-color: transparent;
+}
+
+.hide {
+    display: none;
+}
+.display_inline {
+	display: inline-block;
+}
+
+#backgroundBlur{
+	position: absolute; width: 100%; height: 100%;
+	background-color: #2A2A2A; opacity: 0.4;
+}
+
+#mainArea{
+	position: absolute; width: 100%; height: 100%; min-width: 800px; min-height: 800px;
+	background: url(../media/img_bg.png) repeat;
+}
+
+#headerArea{
+	position: relative; float: left; width: 100%; height: 5%;
+	color: #FFFFFF; font-size: 25px; z-index: 1;
+}
+
+#headerTitle{
+	position: relative; float: left; padding: 5px 10px;
+	font-weight: 800; font-size: 33px; 
+}
+
+#bodyArea{
+	position: relative; float: left; width: 100%; height: 90%;
+	z-index: 1; min-width: 800px;
+}
+
+#loadingBox{
+	position: relative; margin: 10% auto;
+	width: 400px; height: 400px; border-radius: 40px;
+	display: none; /*E8A635은 노랑*/
+}
+
+#loadingBox #loadingGif{
+	display: none; 
+    max-width: 60%;
+    max-height: 60%;
+    margin:0 auto;
+}
+
+#loginBox{
+	position: relative; margin: 10% auto;
+	width: 400px; height: 400px; border-radius: 40px;
+	background-color: #E8A635; display: none; /*E8A635은 노랑*/
+}
+
+#loginBoxHead{
+	position: relative; float: left; width: 100%; height: 50%;
+}
+
+#loginBoxLogo{
+	position: relative; width: 120px; height: 120px; margin: 20px 143px 0px;
+}
+
+#loginBoxDescription{
+	position: relative; float: left; width: 100%; height: 50px; text-align: center;
+	font-size: 40px; color: #FFFFFF; font-weight: 800;
+}
+
+#loginBoxBody{
+	position: relative; float: left; width: 100%; height: 50%;
+}
+
+#userId{
+	position: relative; float: left; width: 85%; height: 30px; margin: 15px 30px;
+	border-radius: 10px; border: 2px solid #FFFFFF;; font-size: 20px; background-color: #FFFFFF;
+}
+
+#userPw{
+	position: relative; float: left; width: 85%; height: 30px; margin: 15px 30px;
+	border-radius: 10px; border: 2px solid #FFFFFF;; font-size: 20px; background-color: #FFFFFF;
+}
+#loginBoxEnter{
+	background: url(../media/btn_login.png) no-repeat;
+	position: absolute; width: 30px; height: 30px; top: 84px; left: 340px;
+}
+#loginBoxEnter:hover{
+	background: url(../media/btn_login_hover.png) no-repeat;
+}
+
+#footerArea{
+	position: relative; float: right; height: 5%;
+	color: #FFFFFF; font-size: 20px; z-index: 1;
+}
+
+#footerCopyright{
+	position: relative; margin: 10px 10px 0;
+}

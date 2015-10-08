@@ -1,0 +1,69 @@
+32191부터~35309, 3118개 신형 데이터
+
+강의정보 Lecture
+	// 강의 정보에는 정보 없을 수 있음, 이 경우 '정보없음'
+	강의 번호(lectureId)	- id
+	강의명(lectureName)
+	강의 교수(profName)
+	총점(total)			// 평가 받은 점수
+	총점 분산(totalVariance)
+	난이도(difficulty)
+	학습량(studyTime)
+	출석체크(attendance)
+	학점(grade)					// 얼마나 잘 주는지
+	성취감(achievement)	
+
+	개설학기(semester)
+	학점(getGrade)				// 몇 학점 짜리인지
+	이수구분(takeCode)
+	강의시간(time)
+	과목코드(lecCode)
+	강의평(EvalList)			// 평가 리스트
+
+	강의계획서 - 과목개요(summary), 학습목표(aim), 추천선수과목(prerequisite),과제물(hw)
+
+
+각 사람정보 Person
+	닉네임(nickname)
+	각 평가들 평균 점수
+		총평(total), 난이도(difficulty), 학습량(studyTime), 출첵(attendance), 학점(grade), 성취감(achievement)
+	들었던 강의(lectureList) - 강의 번호들 저장
+
+
+추가로 구현
+교수정보 Professor
+	id
+	이름(name)
+	개설 강의(lectureList)
+
+디비에 필요 없음
+자신 정보
+	자신이 들었던거
+		총평(total), 난이도(difficulty), 학습량(studyTime), 출첵(attendance), 학점(grade), 성취감(achievement)
+
+
+
+========================== 예 ===============================
+lectureName : 시장경제와법
+profName : 김용중 교수님
+total : 3.27
+difficulty : 3.12
+studyTime : 3.31
+attendance : 4.69
+grade : 3.23
+achievement : 2.77
+개설학기 : 2014-2R
+과목코드 : JURA101-00
+학점 : 3학점
+이수구분 : 교양
+강의시간 : 금(5-6) 법학관신관201
+-Person-
+nickname : fritner
+시장경제와 법은 자본주의 시장경제 체제에서 다양한 경제적 이슈들을 어떻게 법적으로 접근할 것인가에 대한 수업입니다.실제로 자유경제를 표방하면서도, 다양한 경제주체들의 보호와 제재를 위해 개입하고 있는 법에 대해 배워볼 수 있는 기회였어요.내용이 약간 많고, 과제가 있습니다.교수님 설명 잘해주시고, 내용도 흥미로웠어요~
+total : 4
+difficulty : 4
+studyTime : 4
+attendance : 4
+grade : 4
+achievement : 4
+=====

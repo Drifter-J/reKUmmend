@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" value="text/html" />
+        <meta charset="utf-8">
+        <title>Login Page</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/index.css') }}" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/index.js') }}"></script>
+    </head>
+    <body>
+    	<div id="mainArea">    	
+
+    		<div id="backgroundBlur"></div>
+    		
+    		<div id="headerArea">
+	    		<span id="headerTitle">reKUmmend</span>
+	    	</div>
+	    	
+	    	<div id="bodyArea">
+	    		<div id="loginBox">
+	    			<div id="loginBoxHead">
+	    				
+	    				<img id="loginBoxLogo" src="static/media/tiger.png" alt="logo" />
+	    			
+	    				<div id="loginBoxDescription">
+	    					Login
+	    				</div>
+	    			</div>
+	    			<div id="loginBoxBody">
+	    				<form method='post' action='/recommend'>
+		    			<input type="text" id="userId" name="userId" placeholder="reKUmmend ID" autofocus>
+		    			<input type="password" id="userPw" name="userPw" placeholder="Password">
+		    			<input type='submit' id="loginBoxEnter" value=""></input>
+		    			</form>
+	    			</div>
+	    		</div>
+	    		<div id="loadingBox">
+	    			<img id="loadingGif" src="static/media/loading-image.gif" />
+	    		</div>
+     
+	    	</div>
+	    	
+	    	<div id="footerArea">
+	    		<span id="footerCopyright">
+	    			Copyright @ 2015 Team 17
+	    		</span>
+	    	</div>
+    	</div>
+
+		<script>
+	    	init();
+	    </script>
+    </body>
+    
+</html>
